@@ -16,6 +16,11 @@
     "electron-config": "^0.2.1",
     "electron-is-dev": "^0.1.2",
     "electron-machine-id": "^1.0.9",
+    "nock": "^9.0.11",
+    "ramda": "^0.23.0",
+    "redux-actions": "^2.0.1",
+    "redux-mock-store": "^1.2.2",
+    "redux-thunk": "^2.2.0",
     "universal-analytics": "^0.4.13"
   },
   "devDependencies": {
@@ -32,12 +37,13 @@
     "express": "^4.15.2",
     "file-loader": "^0.11.1",
     "isomorphic-fetch": "^2.2.1",
+    "jest": "^19.0.2",
     "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
     "mobx": "^3.1.8",
     "mobx-react": "^4.1.5",
     "mobx-react-devtools": "^4.2.11",
-    "node-sass": "^4.5.2",
+    "node-sass": "3.4.2",
     "numeral": "^2.0.6",
     "react": "^15.4.2",
     "react-chartjs-2": "^2.0.5",
@@ -51,7 +57,7 @@
     "resolve-url-loader": "^2.0.2",
     "rimraf": "^2.6.1",
     "sass": "^0.5.0",
-    "sass-loader": "^6.0.3",
+    "sass-loader": "3.2.0",
     "sset": "^0.0.4",
     "style-loader": "^0.16.1",
     "svg-react-loader": "^0.3.7",
@@ -68,6 +74,14 @@
     "dist": "npm run build && build",
     "start": "ENV=development electron desktop",
     "dev": "concurrently -k 'node desktop/server.dev.js' 'npm start'",
-    "lint": "eslint src"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "coverage:watch": "jest --coverage --watch"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "./src/utils/"
+    ]
   }
 }
