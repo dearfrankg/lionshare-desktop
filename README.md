@@ -1,5 +1,15 @@
 # Lionshare Desktop
 
+[![Travis][build-badge]][build]
+[![Coveralls][coveralls-badge]][coveralls]
+
+[build-badge]: https://img.shields.io/travis/dearfrankg/lionshare-desktop/master.png?style=flat-square
+[build]: https://travis-ci.org/dearfrankg/lionshare-desktop
+
+[coveralls-badge]: https://img.shields.io/coveralls/dearfrankg/lionshare-desktop/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/dearfrankg/lionshare-desktop
+
+
 Lionshare is an open source project created by [Ben Jennings](https://twitter.com/benjennin_gs), [Jori Lallo](https://twitter.com/jorilallo) and [Maksim Stepanenko](https://twitter.com/maksim_s).
 
 Lionshare is a simple macOS application that helps you track cryptocurrencies and
