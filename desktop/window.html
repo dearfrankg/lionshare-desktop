@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>LionShare</title>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: #000000;
+
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function() {
+        const isDev = process.env.ENV === 'development';
+        const script = document.createElement('script');
+        script.async = isDev;
+        script.src = isDev
+          ? 'http://localhost:3000/static/bundle.js'
+          : './dist/bundle.js';
+        document.write(script.outerHTML);
+
+        // WHEN I GET A BUGSNAG ACCOUNT
+        // if (!isDev) {
+        //   const bugsnag = document.createElement('script');
+        //   bugsnag.src = 'https://d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js';
+        //   bugsnag.setAttribute('data-apikey', '7855326b6b9f349cd1133490c7c78ea5');
+        //   document.write(bugsnag.outerHTML);
+        // }
+      }());
+    </script>
+  </body>
+</html>
